@@ -1,0 +1,126 @@
+@theme test01
+@import 'uncover';
+
+/* :root 定义了整个主题的颜色变量，方便统一修改 */
+:root {
+  --main-bg-color: #F8F6F2; /* 主要背景色 (米白) */
+  --main-text-color: #4A4A4A; /* 主要文字颜色 (深灰) */
+  --header-bg-color: #A2AA8A; /* 顶部标题栏背景色 (橄榄绿) */
+  --accent-bg-color: #6A7B5F; /* 强调背景色 (鼠尾草绿，用于封面等) */
+  --accent-text-color: #F8F6F2; /* 强调文字颜色 (米白) */
+}
+
+/* section 定义了每一页幻灯片的基础样式 */
+section {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  font-family: var(--font-main);
+  padding: 50px;
+  line-height: 1.6;
+}
+
+/* 标题 h1 的样式，对应PPT中每页顶部的绿色标题栏 */
+h1 {
+  background-color: var(--header-bg-color);
+  color: var(--main-text-color);
+  font-family: var(--font-header);
+  text-align: center;
+  font-size: 2.2em;
+  font-weight: 600;
+  margin: -50px -50px 30px -50px; /* 使其横跨整个页面顶部 */
+  padding: 15px;
+}
+
+/* 其他级别的标题样式 */
+h2, h3, h4, h5, h6 {
+  font-family: var(--font-header);
+  color: var(--main-text-color);
+  font-weight: 600;
+}
+
+h2 { font-size: 1.8em; }
+h3 { font-size: 1.5em; }
+
+/* 列表样式 */
+ul, ol {
+  margin-left: 20px;
+}
+
+li {
+  margin-bottom: 12px;
+}
+
+/* 链接样式 */
+a {
+  color: var(--accent-bg-color);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* ---
+   自定义幻灯片模板
+   在Markdown中使用 `_class: title` 来应用这个样式
+   --- */
+section.title {
+  background-color: var(--accent-bg-color);
+  color: var(--accent-text-color);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section.title h1 {
+  background-color: transparent; /* 在标题页中，h1不需要背景色 */
+  color: var(--accent-text-color);
+  font-size: 4em;
+  border-bottom: 2px solid var(--accent-text-color); /* 模仿标题下的横线 */
+  margin: 0 auto;
+  padding-bottom: 20px;
+  width: 70%;
+}
+
+section.title h2 {
+  background-color: transparent;
+  color: var(--accent-text-color);
+  font-size: 1.5em;
+  font-weight: 400;
+  margin-top: 40px;
+  border: none;
+}
+
+/* ---
+   致谢页模板
+   在Markdown中使用 `_class: thankyou`
+   --- */
+section.thankyou {
+    background-color: var(--accent-bg-color);
+    color: var(--accent-text-color);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section.thankyou h1 {
+    background-color: transparent;
+    color: var(--accent-text-color);
+    font-size: 5em;
+    border: none;
+    margin: 0;
+}
+
+
+/* 页脚页码样式 */
+footer {
+  color: var(--main-text-color);
+  font-size: 0.7em;
+  opacity: 0.8;
+}
+
+/* 强调文字 <storng> 或 **text** */
+strong {
+    color: #333;
+}
