@@ -61,7 +61,7 @@
   - Markdown 原生语法 `![alt](src)` 无法方便地控制图片的大小和对齐。用 \<div> 包裹 \<img> 标签是完美的解决方案。
 
 <div align="center" style="margin: 20px 0;">
-  <img src="./images/5-1-Align_test.png" alt="Align_test" style="max-width: 50%; height: auto;">
+  <img src="./images/4-1-Align_test.png" alt="Align_test" style="max-width: 50%; height: auto;">
 </div>
 
 ---
