@@ -100,5 +100,6 @@
    2. 注意使用的属性是 `height` 和 `background-image`
    3. 示例：<hr style="height: 5px; background-image: linear-gradient(to right, red, yellow, blue);">
 5. **\<br>**（break）：强制换行
-6. **\<ul>**（unordered list）, **\<ol>**（ordered list）, **\<li>**（list item）：略，比起markdown自带的列表，其可以实现更精细的对列表的控制
-
+6. **\<mark>**：高亮
+   1. 可以通过修改参数来改变高亮颜色 `<mark style="background-color:目标颜色;"></mark>`；例如，<mark style="background-color: lightblue;">淡蓝色</mark>
+7. **\<ul>**（unordered list）, **\<ol>**（ordered list）, **\<li>**（list item）：略，比起markdown自带的列表，其可以实现更精细的对列表的控制
