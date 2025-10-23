@@ -15,6 +15,7 @@
 4. 在 Markdown 中简单地使用 html 及 css
 5. 好用爱用的插件
 6. 使用 Marp 插件快速制作简单的 PPT
+7. Mermaid 语法：详见[另一仓库](https://github.com/ursa-minor-alkaid/Mermaid-Learning)
 
 ---
 
