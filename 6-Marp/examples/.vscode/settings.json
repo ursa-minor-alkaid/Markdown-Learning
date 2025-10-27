@@ -1,0 +1,5 @@
+{
+  "markdown.marp.themes": [
+    "./my-themes/orange.css",
+  ]
+}

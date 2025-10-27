@@ -1,0 +1,20 @@
+
+/* @theme orange */
+
+section {
+  color: #f26868;
+  font-size: 30px;
+  padding: 40px;
+
+  background-image: url('./6.4-1-Orange_background.png');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+}
+
+h1, h2 {
+  margin: 0 0 20px 0;
+  color: #005a9c; /* 标题蓝色 */
+  text-align: center;
+}
+
