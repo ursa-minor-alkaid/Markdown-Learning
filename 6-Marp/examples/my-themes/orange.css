@@ -1,20 +1,81 @@
-
 /* @theme orange */
 
-section {
-  color: #f26868;
-  font-size: 30px;
-  padding: 40px;
+@import 'gaia'; /* 继承 gaia 主题，获得良好的基础样式 */
 
-  background-image: url('./6.4-1-Orange_background.png');
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat;
+:root {
+  --primary-orange: #f39c12; /* 一个明亮的橙色 */
+  --darker-orange: #d35400;  /* 一个更深的橙色，用于强调 */
+  --text-color: #ffffff;      /* 主要文本颜色，白色 */
+  --bg-overlay-color: rgba(255, 204, 159, 0.75); /* 半透明橙色叠加层 */
+  --code-bg-color: rgba(0, 0, 0, 0.3); /* 代码块背景 */
 }
 
-h1, h2 {
-  margin: 0 0 20px 0;
-  color: #005a9c; /* 标题蓝色 */
-  text-align: center;
+/* --- 背景核心代码 --- */
+section {
+  position: relative; /* 关键：为伪元素定位提供参考 */
+  background-color: var(--bg-overlay-color); /* 橙色叠加层 */
+  color: var(--text-color);
+  padding: 60px;
+}
+
+/* 使用 ::before 伪元素来创建背景层，这样不会模糊内容 */
+section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  /* 在这里替换为你喜欢的背景图片 URL */
+  background-image: url('https://raw.githubusercontent.com/ursa-minor-alkaid/Markdown-Learning/refs/heads/main/6-Marp/images/6.4-1-Orange_background.png');
+  
+  background-size: cover;
+  background-position: center;
+  
+  /* 关键：对背景应用模糊效果 */
+  filter: blur(2px); /* 模糊2px */
+  
+  /* 确保背景在内容的下面 */
+  z-index: -1;
+}
+
+/* --- 内容样式 --- */
+h1, h2, h3 {
+  color: var(--text-color);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* 给标题加一点阴影，增强可读性 */
+}
+
+h1 {
+  font-size: 3em;
+  border-bottom: 3px solid var(--darker-orange);
+  padding-bottom: 10px;
+}
+
+h2 {
+  font-size: 2.2em;
+}
+
+a {
+  color: var(--text-color);
+  font-weight: bold;
+  text-decoration-color: var(--darker-orange);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--darker-orange);
+}
+
+blockquote {
+  border-left: 5px solid var(--darker-orange);
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+pre, code {
+  background-color: var(--code-bg-color);
+  border-radius: 5px;
+  font-family: 'Fira Code', 'Courier New', monospace;
 }
 
